@@ -1,0 +1,8 @@
+name: k8s_env
+channels:
+  - conda-forge
+  - anaconda-platform
+  - defaults
+dependencies:
+  - kubectl
+  - etcd

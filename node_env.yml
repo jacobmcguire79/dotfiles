@@ -1,0 +1,7 @@
+name: node_env
+channels:
+  - conda-forge
+  - anaconda-platform
+  - defaults
+dependencies:
+  - nodejs=10.16.3

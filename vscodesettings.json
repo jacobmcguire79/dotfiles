@@ -1,0 +1,77 @@
+{
+    "terminal.integrated.shell.windows": "C:\\Users\\username\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+    "http.proxySupport": "on",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.external.windowsExec": "C:\\Users\\username\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+    "editor.renderControlCharacters": true,
+    "window.zoomLevel": 0,
+    "files.associations": {
+        "*.j2": "jinja-yaml",
+        // Ansible
+        "**/vars/**/*.yml": "jinja-yaml",
+        "**/defaults/**/*.yml": "jinja-yaml",
+        "**/group_vars/**/*.yml": "jinja-yaml",
+        "**/host_vars/**/*.yml": "jinja-yaml",
+        "**/tasks/**/*.yml": "ansible",
+        "**/playbooks/**/*.yaml": "ansible",
+        "**/vars/**/*.yaml": "jinja-yaml",
+        "**/defaults/**/*.yaml": "jinja-yaml",
+        "**/group_vars/**/*.yaml": "jinja-yaml",
+        "**/host_vars/**/*.yaml": "jinja-yaml",
+        "**/tasks/**/*.yaml": "ansible",
+        "**/playbooks/**/*.yml": "ansible",
+        // CF
+        "**/cloudformation/**/*.yml": "yaml",
+        "**/cloudformation/**/*.yaml": "yaml",
+    },
+
+    "editor.minimap.enabled": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.helm-path": "/home/username/.vs-kubernetes/tools/helm/linux-amd64/helm",
+        "vs-kubernetes.knownKubeconfigs": [
+            "/cha/users/username/kubeconf.txt",
+            "/home/username/.kube/config"
+        ],
+        "vs-kubernetes.kubeconfig": "/home/username/.kube/config"
+    },
+    "workbench.colorTheme": "Visual Studio Dark",
+    "[ansible]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.autoClosingQuotes": "always",
+        "editor.dragAndDrop": true
+    },
+    "[ansible-advanced]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.autoClosingQuotes": "always",
+        "editor.dragAndDrop": true
+    },
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    // Custom tags for the parser to use
+    "yaml.customTags": [
+        "!And",
+        "!If",
+        "!Not",
+        "!Equals",
+        "!Or",
+        "!FindInMap sequence",
+        "!Base64",
+        "!Cidr",
+        "!Ref",
+        "!Sub",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Join sequence"
+    ],
+    // Enable/disable default YAML formatter (requires restart)
+    "yaml.format.enable": true,
+    "remote.SSH.configFile": "/Users/username/.ssh/config",
+    "editor.multiCursorModifier": "alt"
+}
