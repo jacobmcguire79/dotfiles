@@ -9,8 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
-export ZSH="/home/jzieche/.oh-my-zsh"
-export VAULT_ADDR='https://vault.prod8.bip.va.gov/'
+export ZSH="~/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -82,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # Virtualenvwrapper things
 #export WORKON_HOME=$HOME/.virtualenvs
 #export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
