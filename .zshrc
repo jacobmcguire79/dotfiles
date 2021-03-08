@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.oh-my-zsh/custom/aliases.zsh
+source ~/.zsh/aliases
 source <(kubectl completion zsh)
 complete -F __start_kubectl k
 alias k="kubectl"

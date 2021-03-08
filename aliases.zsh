@@ -18,7 +18,6 @@ alias kgpn='kubectl get pods -n'
 alias kwpn='watch kubectl get pods -n'
 alias kgsn='kubectl get secret -n'
 alias kgssn='kubectl get statefulset -n'
-alias ktun='kubectl exec -it -n zan ruby -- ssh jzieche@10.247.74.76 -o ServerAliveInterval=60'
 # Terraform
 alias tf='terraform'
 
