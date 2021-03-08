@@ -1,0 +1,30 @@
+# First you will move to a namespace with 'kns bss-prodtest'
+alias kns='kubectl config set-context --current --namespace'
+
+# Then all kubectl commands will be run in that ns.
+alias kg='kubectl get'               # Easy to use with autocomplete so 'kg conf' and hitting TAB will expand to 'kg configmap'
+alias kgcf='kubectl get configmap'
+alias kgd='kubectl get deploy'
+alias kgds='kubectl get daemonset'
+alias kgp='kubectl get pods'
+alias kwp='watch kubectl get pods'
+alias kgs='kubectl get secret'
+alias kgss='kubectl get statefulset'
+# In zsh, these all work with autocomplete so typing `kgd ing` and hitting TAB will expand to `kgd ingress`
+alias kgcn='kubectl get configmap -n'
+alias kgdn='kubectl get deploy -n'
+alias kgdsn='kubectl get daemonset -n'
+alias kgpn='kubectl get pods -n'
+alias kwpn='watch kubectl get pods -n'
+alias kgsn='kubectl get secret -n'
+alias kgssn='kubectl get statefulset -n'
+alias ktun='kubectl exec -it -n zan ruby -- ssh jzieche@10.247.74.76 -o ServerAliveInterval=60'
+# Terraform
+alias tf='terraform'
+
+#Ansible
+alias ap='ansible-playbook'
+
+#aws
+alias mfa='source ~/gettoken.sh'
+
