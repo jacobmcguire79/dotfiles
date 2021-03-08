@@ -1,4 +1,7 @@
 # MARKDOWN TESTING
-```python
-
+Add a file:
+```bash
+$ config add somefile
+$ config commit -m "added somefile"
+$ config push
 ```
