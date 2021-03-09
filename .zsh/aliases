@@ -1,4 +1,4 @@
-alias config='/usr/bin/git --git-dir=/home/admin/.cfg/ --work-tree=/home/admin'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # First you will move to a namespace with 'kns bss-prodtest'
 alias kns='kubectl config set-context --current --namespace'
 
