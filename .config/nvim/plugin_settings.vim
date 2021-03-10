@@ -10,7 +10,7 @@ let g:ctrl_cmd = 'CtrlP'
 " working directory according to this variable:
 " r - nearing accestor with .git
 " a - the directory of the current file
-let g:ctrlp_working_path_mode = 'ra' 
+let g:ctrlp_working_path_mode = 'ra'
 " Use gnu find for fast searching on linux
 let g:ctrlp_user_command = "find %s -type f -not -name '^.*'"
 " Exit on last <bs>
@@ -39,7 +39,7 @@ let g:lightline = {
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 " close nerdtree automatically when I open a file
-let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeQuitOnOpen = 0
 " close nerdtree if last buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabFree()) | q | endif
 " Tweaks for browsing

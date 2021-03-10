@@ -53,6 +53,9 @@ match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
+" custom shortcuts
+" delete empty lines
+command RmE g/^$/d
 " Snippets
 nnoremap ,begin :-1read $HOME/.config/nvim/snippets/begin.rb<CR>o
 
