@@ -1,7 +1,11 @@
-# MARKDOWN TESTING
+# Dotfiles repo
 Add a file:
-```bash
+```
 $ config add somefile
 $ config commit -m "added somefile"
 $ config push
+```
+Update Submodules:
+```
+$ git submodule update --init --recursive
 ```
