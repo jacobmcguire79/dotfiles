@@ -9,8 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
-tilde=~
-export ZSH="${tilde}/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -76,7 +75,8 @@ ZSH_CUSTOM=$HOME/.zsh/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git pyenv virtualenv zsh-autosuggestions)
-
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
+PROMPT_EOL_MARK=''
 source $ZSH/oh-my-zsh.sh
 # User configuration
 # Virtualenvwrapper things
@@ -106,10 +106,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.zsh/aliases
+source $HOME/.zsh/aliases
 source <(kubectl completion zsh)
 complete -F __start_kubectl k
 alias k="kubectl"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

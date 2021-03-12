@@ -23,6 +23,7 @@ Plug 'tpope/vim-rake'
 Plug 'danchoi/ri.vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'ngmy/vim-rubocop'
+Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 " Colorschemes
 Plug 'chuling/equinusocio-material.vim'
 call plug#end()
