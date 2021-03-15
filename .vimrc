@@ -55,7 +55,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 "autocmd FileType yml setlocal et ts=2 ai sw=2 nu sts=0
 let g:ansible_unindent_after_newline = 1
-colorscheme tender
+" colorscheme tender
 let g:surround_insert_tail = "<++>"
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
