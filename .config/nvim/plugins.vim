@@ -17,6 +17,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'towolf/vim-helm'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-surround'
+Plug 'deoplete-plugins/deoplete-jedi'
 " Ruby specific
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
