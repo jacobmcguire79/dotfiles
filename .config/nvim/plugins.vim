@@ -7,6 +7,7 @@ Plug 'roxma/nvim-yarp'          " Required before deoplete
 Plug 'roxma/vim-hug-neovim-rpc' " Required before deoplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
