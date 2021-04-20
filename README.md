@@ -15,6 +15,5 @@ $ config push
 ```
 Update Submodules:
 ```shell
-$ git submodule update --init --recursive
+$ config submodule update --init --recursive
 ```
-Thanks to the author of these instructions: [Gabrielle Young](https://www.ackama.com/blog/posts/the-best-way-to-store-your-dotfiles-a-bare-git-repository-explained)
