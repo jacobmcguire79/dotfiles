@@ -304,15 +304,9 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 # set -g @plugin 'github_username/plugin_name'
 # set -g @plugin 'git@github.com:user/plugin'
 # set -g @plugin 'git@bitbucket.com:user/plugin'
-# rename windows and panes with current path
-set-option -g status-interval 5
-set-option -g automatic-rename on
-set-option -g automatic-rename-format '#{b:pane_current_path}'
+
 # initialize tmux resurrect
 set -g @resurrect-save 'S'
 set -g @resurrect-restore 'R'
-# Install tpm if not already installed
-if "test ! -d ~/.tmux/plugins/tpm" \
-   "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'

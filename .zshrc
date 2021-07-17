@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export TERM="xterm-256color"
 # Path to your oh-my-zsh installation.
-export ZSH="${HOME}/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -75,8 +75,7 @@ ZSH_CUSTOM=$HOME/.zsh/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git pyenv virtualenv zsh-autosuggestions)
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
-PROMPT_EOL_MARK=''
+
 source $ZSH/oh-my-zsh.sh
 # User configuration
 # Virtualenvwrapper things
@@ -97,9 +96,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-# AWS command completion
-autoload bashcompinit && bashcompinit
-complete -C '${HOME}/.local/bin/aws_completer' aws
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -108,9 +105,15 @@ complete -C '${HOME}/.local/bin/aws_completer' aws
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source $HOME/.zsh/aliases
+source ~/.zsh/aliases
 source <(kubectl completion zsh)
 complete -F __start_kubectl k
 alias k="kubectl"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

@@ -52,7 +52,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWritePre * %s/\s\+$//e
+
 " custom shortcuts
 " delete empty lines
 command RmE g/^$/d
