@@ -52,6 +52,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd FileType yaml,yaml,json,py autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " custom shortcuts
 " delete empty lines

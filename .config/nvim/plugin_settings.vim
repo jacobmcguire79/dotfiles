@@ -23,6 +23,8 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+" ansible-vim
+let g:ansible_unindent_after_newline = 1
 
 " deoplete
 let g:deoplete#enable_at_startup = 0
