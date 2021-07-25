@@ -25,6 +25,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 " ansible-vim
 let g:ansible_unindent_after_newline = 1
+let g:ansible_attribute_highlight = "ad"
 
 " deoplete
 let g:deoplete#enable_at_startup = 0
@@ -69,8 +70,15 @@ let g:coc_snippet_next = '<tab>'
 " lightline
 let g:lightline = {
       \ 'colorscheme': 'equinusocio_material',
+      \ 'active': {
+      \    'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead',
+      \   'filename': 'LightlineFilename'
+      \ },
       \ }
-
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 " close nerdtree automatically when I open a file
