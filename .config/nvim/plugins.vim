@@ -22,6 +22,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'towolf/vim-helm'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-surround'
+Plug 'pearofducks/ansible-vim'
 " Ruby specific
 Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
 Plug 'tpope/vim-rails'
@@ -31,4 +32,5 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'ngmy/vim-rubocop'
 " Colorschemes
 Plug 'chuling/equinusocio-material.vim'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
