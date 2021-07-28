@@ -81,6 +81,7 @@ let g:lightline = {
       \ }
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 " close nerdtree automatically when I open a file
 " let g:NERDTreeQuitOnOpen = 0
 " close nerdtree if last buffer

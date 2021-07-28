@@ -188,9 +188,9 @@ tmux_conf_theme_status_left_bg='#e4e4e4,#00afff,#8bc34a'  # white, blue , green
 tmux_conf_theme_status_left_attr='bold,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#8a8a8a,#e4e4e4,#000000' # light gray, white, black
-tmux_conf_theme_status_right_bg='#cfd8dc,#8bc34a,#e4e4e4' # light gray, green, white
-tmux_conf_theme_status_right_attr='none,none,bold'
+tmux_conf_theme_status_right_fg='#e4e4e4,#000000,#000000' # light gray, white, black
+tmux_conf_theme_status_right_bg='#ff9800,#ffc107,#e4e4e4' # orange, yellow, white
+tmux_conf_theme_status_right_attr='none,bold,bold'
 
 # pairing indicator
 tmux_conf_theme_pairing='👓 '          # U+1F453
@@ -200,9 +200,9 @@ tmux_conf_theme_pairing_attr='none'
 
 # prefix indicator
 tmux_conf_theme_prefix='⌨ '            # U+2328
-tmux_conf_theme_prefix_fg='none'
-tmux_conf_theme_prefix_bg='none'
-tmux_conf_theme_prefix_attr='none'
+tmux_conf_theme_prefix_fg='#000000'
+tmux_conf_theme_prefix_bg='#ffc107'
+tmux_conf_theme_prefix_attr='bold'
 
 # root indicator
 tmux_conf_theme_root='!'
