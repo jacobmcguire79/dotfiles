@@ -10,7 +10,12 @@ Plug 'roxma/vim-hug-neovim-rpc' " Required before deoplete
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
+" Nerdtree
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+            \ Plug 'scrooloose/nerdtree' |
+            \ Plug 'ryanoasis/vim-devicons'
+" tmux
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 " Neoclide COC
@@ -33,5 +38,4 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'ngmy/vim-rubocop'
 " Colorschemes
 Plug 'chuling/equinusocio-material.vim'
-Plug 'ryanoasis/vim-devicons'
 call plug#end()
