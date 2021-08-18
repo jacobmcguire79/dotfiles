@@ -1,6 +1,8 @@
 #!/bin/bash
 good = true
 
+shopt -s expand_aliases
+
 if [[ ! -x $(which git) ]]; then
   good = false
   echo "git is not installed."
