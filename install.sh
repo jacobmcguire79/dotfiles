@@ -1,8 +1,6 @@
 #!/bin/bash
 good = true
 
-shopt -s expand_aliases
-
 if [[ ! -x $(which git) ]]; then
   good = false
   echo "git is not installed."
@@ -20,6 +18,7 @@ fi
 if [[ ! -f "$HOME/.cfg" ]]; then
   echo ".cfg" >> .gitignore
   git clone --bare https://github.com/jaredzieche/dotfiles.git $HOME/.cfg --recurse-submodules
+  shopt -s expand_aliases
   alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
   config config --local status.showUntrackedFiles no
   config checkout
