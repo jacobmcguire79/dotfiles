@@ -21,3 +21,7 @@ if [[ ! -f "$HOME/.cfg" ]]; then
   /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME config --local status.showUntrackedFiles no
   /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME checkout
 fi
+
+if [[ ! -f "$HOME/.oh-my-zsh" ]]; then
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi

@@ -38,4 +38,10 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'ngmy/vim-rubocop'
 " Colorschemes
 Plug 'chuling/equinusocio-material.vim'
+" Testing
+Plug 'tpope/vim-dispatch'
+Plug 'vim-test/vim-test'
+Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
+Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
 call plug#end()

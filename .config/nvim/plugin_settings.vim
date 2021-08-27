@@ -34,8 +34,18 @@ let g:deoplete#enable_at_startup = 0
 "inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 "inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
+" vim-test
+let test#strategy = "neovim"
+" ultest
+let test#python#pytest#options = "--color=yes"
+
 " coc
 let g:coc#enable_at_startup = 1
+let g:coc_global_extensions = ['coc-json', 'coc-python', 'coc-lua']
+
+"call coc#config('https.rejectUnauthorized', {
+"        \ 'value': false,
+"        \})
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
 
