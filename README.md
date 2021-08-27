@@ -1,5 +1,12 @@
 # Dotfiles repo
 Bring this config to a new machine:
+
+Automated:
+```shell
+sh -c "`curl -fsSL https://raw.githubusercontent.com/jaredzieche/dotfiles/master/install.sh`"
+```
+
+Manually:
 ```shell
 echo ".cfg" >> .gitignore
 git clone --bare https://github.com/jaredzieche/dotfiles.git $HOME/.cfg
