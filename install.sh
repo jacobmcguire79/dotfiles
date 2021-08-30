@@ -11,6 +11,11 @@ if [[ ! -x $(which zsh) ]]; then
   echo "zsh is not installed."
 fi
 
+if [[ ! -f "$HOME/.oh-my-zsh" ]]; then
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+  chsh -s $(which zsh)
+fi
+
 if [[ -f "$HOME/.zshrc" ]]; then
   rm -f "$HOME/.zshrc"
 fi
@@ -20,10 +25,9 @@ if [[ ! -f "$HOME/.cfg" ]]; then
   git clone --bare https://github.com/jaredzieche/dotfiles.git $HOME/.cfg --recurse-submodules
   /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME config --local status.showUntrackedFiles no
   /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME checkout
+  git submodule --init --recursive
 fi
 
-if [[ ! -f "$HOME/.oh-my-zsh" ]]; then
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [[ -x $(which ansible) ]];
+  ansible-playbook install.yml
 fi
-
-ansible-playbook install.yml
