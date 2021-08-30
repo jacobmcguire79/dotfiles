@@ -19,6 +19,7 @@ Plug 'preservim/nerdtree' |
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 " Neoclide COC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
 " Snippets
 Plug 'honza/vim-snippets'

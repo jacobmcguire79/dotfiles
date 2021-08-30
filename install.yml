@@ -1,0 +1,41 @@
+- name: "setup dotfile configuration"
+  hosts: localhost
+  tasks:
+    - name: "install packages"
+      package:
+        state: "latest"
+        name:
+          - konsole
+
+    - name: "rhel neovim block"
+      block:
+        - name: "remove package versions not provided by rhel"
+          package:
+            state: absent
+            name:
+              - neovim
+
+        - name: "install python-neovim"
+          package:
+            state: present
+            name: python-neovim
+
+        - name: "install pynvim"
+          pip:
+            name: pynvim
+
+        - name: "install neovim from appimage"
+          get_url:
+            dest: "/usr/bin/nvim"
+            url: "https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage"
+            validate_certs: no
+
+        - name: "updated nvim permissions"
+          file:
+            path: "/usr/bin/nvim"
+            group: root
+            state: file
+            mode: "u+x"
+            owner: "root"
+      when: ansible_os_family == "RedHat"
+      become: true
