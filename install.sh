@@ -1,16 +1,16 @@
 #!/bin/bash
 
-if [[ ! -x $(which ansible) ]];
+if [[ ! -x $(which ansible) ]]; then
   pip install ansible
 fi
 
-if [[ -x $(which ansible) ]];
+if [[ -x $(which ansible) ]]; then
   ansible-playbook install.yml
 fi
 
 if [[ ! -f "$HOME/.oh-my-zsh" ]]; then
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-  chsh -s $(which zsh)
+  sudo chsh -s $(which zsh) $(whoami)
 fi
 
 if [[ -f "$HOME/.zshrc" ]]; then
@@ -24,4 +24,3 @@ if [[ ! -f "$HOME/.cfg" ]]; then
   /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME checkout
   git submodule --init --recursive
 fi
-
