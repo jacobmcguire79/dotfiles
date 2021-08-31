@@ -6,6 +6,9 @@
         state: "latest"
         name:
           - konsole
+          - zsh
+          - git
+      become: true
 
     - name: "rhel neovim block"
       block:

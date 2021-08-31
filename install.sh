@@ -1,14 +1,11 @@
 #!/bin/bash
-good = true
 
-if [[ ! -x $(which git) ]]; then
-  good = false
-  echo "git is not installed."
+if [[ ! -x $(which ansible) ]];
+  pip install ansible
 fi
 
-if [[ ! -x $(which zsh) ]]; then
-  good = false
-  echo "zsh is not installed."
+if [[ -x $(which ansible) ]];
+  ansible-playbook install.yml
 fi
 
 if [[ ! -f "$HOME/.oh-my-zsh" ]]; then
@@ -28,6 +25,3 @@ if [[ ! -f "$HOME/.cfg" ]]; then
   git submodule --init --recursive
 fi
 
-if [[ -x $(which ansible) ]];
-  ansible-playbook install.yml
-fi
