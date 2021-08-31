@@ -1,4 +1,4 @@
-- name: "setup dotfile configuration"
+- name: "setup dotfile dependencies"
   hosts: localhost
   tasks:
     - name: "install packages"
@@ -18,10 +18,10 @@
             name:
               - neovim
 
-        - name: "install python-neovim"
+        - name: "install python3-neovim"
           package:
             state: present
-            name: python-neovim
+            name: python3-neovim
 
         - name: "install pynvim"
           pip:

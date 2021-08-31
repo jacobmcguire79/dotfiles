@@ -1,5 +1,15 @@
 #!/bin/bash
 
+config = "/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME"
+
+if [[ ! -f "$HOME/.cfg" ]]; then
+  echo ".cfg" >> .gitignore
+  git clone --bare https://github.com/jaredzieche/dotfiles.git $HOME/.cfg --recurse-submodules
+  $config config --local status.showUntrackedFiles no
+  $config checkout
+  $config git submodule --init --recursive
+fi
+
 if [[ ! -x $(which ansible) ]]; then
   pip install ansible
 fi
@@ -15,12 +25,4 @@ fi
 
 if [[ -f "$HOME/.zshrc" ]]; then
   rm -f "$HOME/.zshrc"
-fi
-
-if [[ ! -f "$HOME/.cfg" ]]; then
-  echo ".cfg" >> .gitignore
-  git clone --bare https://github.com/jaredzieche/dotfiles.git $HOME/.cfg --recurse-submodules
-  /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME config --local status.showUntrackedFiles no
-  /usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME checkout
-  git submodule --init --recursive
 fi
