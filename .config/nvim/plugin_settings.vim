@@ -37,7 +37,7 @@ let g:deoplete#enable_at_startup = 0
 " vim-test
 let test#strategy = "neovim"
 " ultest
-let test#python#pytest#options = "--color=yes"
+"let test#python#pytest#options = "--color=yes"
 
 " coc
 let g:coc#enable_at_startup = 1
