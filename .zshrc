@@ -74,7 +74,7 @@ ZSH_CUSTOM=$HOME/.zsh/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pyenv virtualenv zsh-autosuggestions)
+plugins=(git pipenv pyenv virtualenv zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 # User configuration
@@ -122,3 +122,5 @@ alias k="kubectl"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[[ -s "/home/jzieche/.gvm/scripts/gvm" ]] && source "/home/jzieche/.gvm/scripts/gvm"
