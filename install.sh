@@ -18,7 +18,7 @@ if [[ ! -f "$HOME/.cfg" ]]; then
   git clone --bare https://github.com/jaredzieche/dotfiles.git $HOME/.cfg --recurse-submodules
   config config --local status.showUntrackedFiles no
   config checkout
-  config git submodule --init --recursive
+  config submodule --init --recursive
 fi
 
 if [[ ! -x $(which ansible) ]]; then
