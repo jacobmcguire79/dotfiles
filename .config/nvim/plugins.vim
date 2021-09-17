@@ -9,18 +9,28 @@ Plug 'roxma/vim-hug-neovim-rpc' " Required before deoplete
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
+Plug 'hoob3rt/lualine.nvim'
 " Nerdtree
-Plug 'preservim/nerdtree' |
-            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
-            \ Plug 'scrooloose/nerdtree' |
-            \ Plug 'ryanoasis/vim-devicons'
+"Plug 'preservim/nerdtree' |
+"            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+"            \ Plug 'scrooloose/nerdtree' |
+"            \ Plug 'ryanoasis/vim-devicons'
+" TreeSitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+" SnipRun
+Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 " Neoclide COC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
 " Snippets
 Plug 'honza/vim-snippets'
 Plug 'phenomenes/ansible-snippets'
@@ -39,6 +49,7 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'ngmy/vim-rubocop'
 " Colorschemes
 Plug 'chuling/equinusocio-material.vim'
+Plug 'marko-cerovac/material.nvim'
 " Testing
 Plug 'tpope/vim-dispatch'
 Plug 'vim-test/vim-test'
