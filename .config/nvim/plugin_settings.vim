@@ -129,7 +129,7 @@ EOF
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabFree()) | q | endif
 " open new tmux panes in current vim directory
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NvimTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+"autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NvimTreeOpen' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 " Tweaks for browsing
 "let g:netrw_banner=0        " disable annoying banner
 "let g:netrw_browser_split=4 " open in prior window

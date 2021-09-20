@@ -42,7 +42,7 @@
             owner: "root"
 
         - name: "install neovim plugins"
-          command: nvim "+silent! PlugInstall!" +qall!
+          command: nvim +silent! PlugInstall! +qall!
 
       when: ansible_os_family == "RedHat"
       become: true
