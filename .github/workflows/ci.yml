@@ -21,7 +21,7 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install ansible requests
       - name: test install
-        run: sh -c "`curl -fsSL https://raw.githubusercontent.com/jaredzieche/dotfiles/master/install.sh`" "" --unattended
+        run: ./install.sh
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'

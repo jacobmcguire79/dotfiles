@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'kevinhwang91/nvim-bqf'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'preservim/vimux'
 Plug 'roxma/nvim-yarp'          " Required before deoplete
 Plug 'roxma/vim-hug-neovim-rpc' " Required before deoplete
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
