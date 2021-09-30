@@ -11,6 +11,7 @@ dotconfig() {
   config init
   config remote add origin https://github.com/jaredzieche/dotfiles.git
   config fetch origin
+  config config --local status.showUntrackedFiles no
   config checkout $branch -f
 }
 

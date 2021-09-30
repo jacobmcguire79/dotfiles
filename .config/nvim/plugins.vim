@@ -41,20 +41,21 @@ Plug 'towolf/vim-helm'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-surround'
 Plug 'pearofducks/ansible-vim'
+Plug 'neovim/nvim-lspconfig'
 " Ruby specific
-Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rake'
-Plug 'danchoi/ri.vim'
-Plug 'thoughtbot/vim-rspec'
-Plug 'ngmy/vim-rubocop'
+"Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
+"Plug 'tpope/vim-rails'
+"Plug 'tpope/vim-rake'
+"Plug 'danchoi/ri.vim'
+"Plug 'thoughtbot/vim-rspec'
+"Plug 'ngmy/vim-rubocop'
 " Colorschemes
 Plug 'chuling/equinusocio-material.vim'
 Plug 'marko-cerovac/material.nvim'
 " Testing
 Plug 'tpope/vim-dispatch'
-Plug 'vim-test/vim-test'
-Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
+"Plug 'vim-test/vim-test'
+"Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 Plug 'mfussenegger/nvim-dap'
 Plug 'mfussenegger/nvim-dap-python'
 call plug#end()
