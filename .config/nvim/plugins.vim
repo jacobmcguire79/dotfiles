@@ -2,21 +2,14 @@
 let mapleader = ','
 call plug#begin('~/.config/nvim/plugged')
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'kevinhwang91/nvim-bqf'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'kevinhwang91/nvim-bqf'
+" if you install fzf as system package like `pacman -S fzf` in ArchLinux,
+" please comment next line
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/vimux'
-Plug 'roxma/nvim-yarp'          " Required before deoplete
-Plug 'roxma/vim-hug-neovim-rpc' " Required before deoplete
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-"Plug 'itchyny/lightline.vim'
 Plug 'hoob3rt/lualine.nvim'
-" Nerdtree
-"Plug 'preservim/nerdtree' |
-"            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
-"            \ Plug 'scrooloose/nerdtree' |
-"            \ Plug 'ryanoasis/vim-devicons'
 " TreeSitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Telescope
@@ -30,18 +23,24 @@ Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 " Neoclide COC
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
 " Snippets
 Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
 Plug 'phenomenes/ansible-snippets'
+" nvim-cmp
+"Plug 'neovim/nvim-lspconfig'
+"Plug 'hrsh7th/cmp-nvim-lsp'
+"Plug 'hrsh7th/cmp-buffer'
+"Plug 'hrsh7th/nvim-cmp'
 " Syntax and generic language specific
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'towolf/vim-helm'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-surround'
 Plug 'pearofducks/ansible-vim'
-Plug 'neovim/nvim-lspconfig'
+"Plug 'neovim/nvim-lspconfig'
 " Ruby specific
 "Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
 "Plug 'tpope/vim-rails'
