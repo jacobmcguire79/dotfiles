@@ -15,3 +15,6 @@ MiddleClickPasteMode=1
 TrimLeadingSpacesInSelectedText=false
 TrimTrailingSpacesInSelectedText=false
 TripleClickMode=1
+
+[Scrolling]
+ScrollBarPosition=2

@@ -36,6 +36,13 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " open new tmux panes in current vim directory
 autocmd StdinReadPre * let s:std_in=1
 
+" sniprun
+lua << EOF
+require'sniprun'.setup({
+  display = { "LongTempFloatingWindow" },
+})
+EOF
+
 " lualine
 lua << EOF
 require'lualine'.setup {
@@ -213,11 +220,11 @@ require'nvim-tree'.setup {
 
   view = {
     -- width of the window, can be either a number (columns) or a string in `%`
-    width = 10,
+    width = 30,
     -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
     side = 'left',
     -- if true the tree will resize itself after opening a file
-    auto_resize = false,
+    auto_resize = true,
     mappings = {
       -- custom only false will merge the list with the default mappings
       -- if true, it will only use your list to set the mappings
