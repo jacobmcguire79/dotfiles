@@ -6,6 +6,7 @@ shopt -s expand_aliases
 alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
 
 dotconfig() {
+  cd $HOME
   echo ".cfg" >> .gitignore
   config stash -a
   config init
