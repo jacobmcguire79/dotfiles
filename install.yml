@@ -1,7 +1,7 @@
 - name: "setup workstation configurations"
   hosts: localhost
   tasks:
-    - name: "install packages"
+    - name: "install packages via {{ ansible_pkg_mgr }}"
       package:
         state: "latest"
         name:
