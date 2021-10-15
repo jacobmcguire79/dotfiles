@@ -5,6 +5,7 @@ name: Dotfiles Test
   push:
     branches:
       - master
+      - lua-config
 jobs:
   test:
     name: dotfiles
@@ -21,7 +22,7 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install ansible requests
       - name: test install
-        run: ./install.sh
+        run: ./install.sh lua-config zsh
         env:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
