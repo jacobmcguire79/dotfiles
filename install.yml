@@ -41,7 +41,8 @@
             mode: "u+x"
             owner: "root"
 
-        - name: "install neovim plugins"
-          command: nvim +silent! +PlugInstall! +qall!
-
       become: true
+
+    - name: "install neovim plugins"
+      command: nvim +silent! +PlugInstall! +qall!
+
