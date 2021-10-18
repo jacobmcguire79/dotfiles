@@ -44,5 +44,4 @@
       become: true
 
     - name: "install neovim plugins"
-      command: nvim --cmd PlugInstall +silent! +qall!
-
+      command: nvim -es PlugInstall!
