@@ -1,26 +1,24 @@
 # Dotfiles repo
 Bring this config to a new machine:
-
-Automated:
-```shell
-sh -c "`curl -fsSL https://raw.githubusercontent.com/jaredzieche/dotfiles/master/install.sh`"
+Variables:
+branch: desired from this config that you want to install
+shell: desired shell interpreter yo would like to use(currently only set up for `zsh`)
+```
+git clone https://github.com/jaredzieche/dotfiles.git
+```
+```
+./install.sh ${branch} ${interpreter}
 ```
 
-Manually:
-```shell
-echo ".cfg" >> .gitignore
-git clone --bare https://github.com/jaredzieche/dotfiles.git $HOME/.cfg
-alias config='/usr/bin/git --git-dir=$HOME/.cfg --work-tree=$HOME'
-config config --local status.showUntrackedFiles no
-config checkout
-```
-Add a file:
-```shell
-config add somefile
-config commit -m "added somefile"
-config push
-```
-Update Submodules:
-```shell
-config submodule update --init --recursive
-```
+## Current Setup:
+Currently running mostly in RHEL but have tested in latest ubuntu and osx as well.
+- neovim 5.0
+  - nvim.coc for auto complete, lsp and snippets
+- zsh
+- powerlevel10k prompt
+
+## TODO
+- Move into full lua config with native neovim lsp support.
+- add multiple options for shell installation
+- refine installation script an add in more ansible configuration options/tasks to react per OS distro
+![image](https://user-images.githubusercontent.com/28032466/137920716-741335c6-4bbf-43e7-8b53-a9c1132a757b.png)
