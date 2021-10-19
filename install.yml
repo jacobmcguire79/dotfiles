@@ -1,7 +1,7 @@
-- name: "setup dotfile dependencies"
+- name: "setup workstation configurations"
   hosts: localhost
   tasks:
-    - name: "install packages"
+    - name: "install packages via {{ ansible_pkg_mgr }}"
       package:
         state: "latest"
         name:
@@ -10,7 +10,7 @@
           - git
       become: true
 
-    - name: "rhel neovim block"
+    - name: "neovim nightly block"
       block:
         - name: "remove package versions not provided by rhel"
           package:
@@ -41,8 +41,7 @@
             mode: "u+x"
             owner: "root"
 
-        - name: "install neovim plugins"
-          command: nvim "+silent! PlugInstall!" +qall!
-
-      when: ansible_os_family == "RedHat"
       become: true
+
+    - name: "install neovim plugins"
+      command: nvim -es PlugInstall!

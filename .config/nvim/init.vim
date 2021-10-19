@@ -37,7 +37,8 @@ nnoremap td :tabclose<CR>
 
 " *** Colors and syntax highlighting
 set termguicolors                " enable true (256 bit) colors
-colorscheme equinusocio_material " set our colorscheme
+"colorscheme equinusocio_material " set our colorscheme
+colorscheme material
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·

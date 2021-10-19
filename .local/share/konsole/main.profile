@@ -1,5 +1,5 @@
 [Appearance]
-ColorScheme=Material
+ColorScheme=Ocean
 Font=MesloLGS NF,10,-1,5,50,0,0,0,0,0
 
 [General]
@@ -15,3 +15,6 @@ MiddleClickPasteMode=1
 TrimLeadingSpacesInSelectedText=false
 TrimTrailingSpacesInSelectedText=false
 TripleClickMode=1
+
+[Scrolling]
+ScrollBarPosition=2
