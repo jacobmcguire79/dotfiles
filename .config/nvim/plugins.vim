@@ -25,11 +25,12 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 " Neoclide COC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}} " Language Server support
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install('terraform-ls')}} " Language Server support
 " Snippets
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'phenomenes/ansible-snippets'
+Plug 'cwood/ultisnips-terraform-snippets'
 " nvim-cmp
 "Plug 'neovim/nvim-lspconfig'
 "Plug 'hrsh7th/cmp-nvim-lsp'
@@ -41,6 +42,7 @@ Plug 'towolf/vim-helm'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-surround'
 Plug 'pearofducks/ansible-vim'
+Plug 'hashivim/vim-terraform'
 "Plug 'neovim/nvim-lspconfig'
 " Ruby specific
 "Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers

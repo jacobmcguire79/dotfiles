@@ -78,6 +78,9 @@ fi
 # completion
 autoload -U compinit
 compinit -i
+# aws completion
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 # Alias

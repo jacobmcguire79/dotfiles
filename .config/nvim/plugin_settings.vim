@@ -32,6 +32,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+" Vim-terraform
+let g:hcl_align=1
+let g:hcl_fold_sections=1
+let g:terraform_align=1
 " tmux specific
 " open new tmux panes in current vim directory
 autocmd StdinReadPre * let s:std_in=1
@@ -55,7 +59,8 @@ require'lualine'.setup {
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch'},
+    lualine_b = {'branch', 'diff',
+                  {'diagnostics', sources={'coc'}}},
     lualine_c = {'filename'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
@@ -70,7 +75,7 @@ require'lualine'.setup {
     lualine_z = {}
   },
   tabline = {},
-  extensions = {'nvim-tree'}
+  extensions = {'nvim-tree', 'fugitive'}
   }
 EOF
 
@@ -205,7 +210,7 @@ require'nvim-tree'.setup {
     enable      = true,
     -- update the root directory of the tree to the one of the folder containing the file if the file is not under the current root directory
     -- only relevant when `update_focused_file.enable` is true
-    update_cwd  = true,
+    update_cwd  = false,
     -- list of buffer names / filetypes that will not update the cwd if the file isn't found under the current root directory
     -- only relevant when `update_focused_file.update_cwd` is true and `update_focused_file.enable` is true
     ignore_list = {}
