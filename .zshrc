@@ -81,6 +81,7 @@ compinit -i
 # aws completion
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 # Alias
@@ -88,6 +89,8 @@ source ~/.zsh/aliases
 source <(kubectl completion zsh)
 complete -F __start_kubectl k
 alias k="kubectl"
+source <(helm completion zsh)
+source <(helm3 completion zsh)
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

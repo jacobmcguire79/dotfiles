@@ -20,6 +20,7 @@ alias kwpn='watch kubectl get pods -n'
 alias kgsn='kubectl get secret -n'
 alias kgssn='kubectl get statefulset -n'
 alias wkev='watch "kubectl get events --sort-by .lastTimestamp | tail -n 20"'
+alias kev='kubectl get events --sort-by=.metadata.creationTimestamp -n'
 # Terraform
 alias tf='terraform'
 
@@ -33,4 +34,4 @@ alias ave='ansible-vault edit'
 
 #aws
 alias mfa='source ~/gettoken.sh'
-
+alias asc='aws ssm start-session --target'
