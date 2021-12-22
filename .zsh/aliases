@@ -35,3 +35,5 @@ alias ave='ansible-vault edit'
 #aws
 alias mfa='source ~/gettoken.sh'
 alias asc='aws ssm start-session --target'
+alias ecrlogin='aws ecr get-login-password --region us-gov-west-1 | docker login --username AWS --password-stdin $(aws sts get-caller-identity --query Account --output text).dkr.ecr.us-gov-west-1.amazonaws.com'
+alias adfslog='aws-adfs login --adfs-host=prod.adfs.federation.va.gov --provider-id urn:amazon:webservices:govcloud --region us-gov-west-1 --no-ssl-verification'

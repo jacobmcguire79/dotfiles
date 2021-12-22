@@ -1,9 +1,10 @@
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAACgAAAAT6AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIBAAAFif////8AAAAAAAAAAA==
+StatusBar=Disabled
+XWAYLAND0 Window-Maximized 2560x1375=true
+
 [Desktop Entry]
 DefaultProfile=main.profile
-
-[DownloadDialog Settings]
-Height 1440=456
-Width 2560=700
 
 [Favorite Profiles]
 Favorites=main.profile
@@ -12,40 +13,19 @@ Favorites=main.profile
 ShowMenuBarByDefault=false
 
 [MainWindow]
-Height 1080=1080
-Height 1335=1335
-Height 1344=1279
-Height 1375=1375
-Height 1440=1376
-Height 1600=1010
-Height 446=446
-Height 948=948
-Height 975=975
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAACgAAAAUfAAAABAAAAAQAAAAIAAAACPwAAAAA
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAACgAAAAUfAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAAAAAAHABzAGUAcwBzAGkAbwBuAFQAbwBvAGwAYgBhAHIAAAAFif////8AAAAAAAAAAA==
+StatusBar=Disabled
 ToolBarsMovable=Disabled
-Width 1276=1276
-Width 1920=1920
-Width 2560=2560
-Width 958=958
-Window-Maximized 1015x1920=true
-Window-Maximized 1024x1920=true
-Window-Maximized 1050x1680=true
-Window-Maximized 1200x1600=true
-Window-Maximized 1200x1920=true
-Window-Maximized 1337x1278=true
-Window-Maximized 1343x1278=true
-Window-Maximized 1344x2560=true
-Window-Maximized 1375x2560=true
-Window-Maximized 1440x1920=true
-Window-Maximized 1600x2560=true
-Window-Maximized 400x657=true
-Window-Maximized 496x698=true
-Window-Maximized 515x646=true
-Window-Maximized 525x661=true
-Window-Maximized 531x661=true
-Window-Maximized 600x800=true
-Window-Maximized 935x1920=true
-Window-Maximized 945x1680=true
-Window-Maximized 984x1920=true
-Window-Maximized 995x1920=true
+XWAYLAND0 Height 2560x1600=1536
+XWAYLAND0 Width 2560x1600=2560
+XWAYLAND0 Window-Maximized 1920x1015=true
+XWAYLAND0 Window-Maximized 2560x1375=true
+XWAYLAND0 Window-Maximized 2560x1440=true
+XWAYLAND0 Window-Maximized 640x480=true
+XWAYLAND0 Window-Maximized 640x657=true
+XWAYLAND0 XPosition 2560x1375=571
+XWAYLAND0 XPosition 2560x1600=0
+XWAYLAND0 YPosition 2560x1375=99
+XWAYLAND0 YPosition 2560x1600=64

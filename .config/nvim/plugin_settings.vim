@@ -36,6 +36,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:hcl_align=1
 let g:hcl_fold_sections=1
 let g:terraform_align=1
+
+" vim-aws
+let g:AWSVimValidate = 1
+
 " tmux specific
 " open new tmux panes in current vim directory
 autocmd StdinReadPre * let s:std_in=1
@@ -263,7 +267,7 @@ set updatetime=300
 set shortmess+=c
 let g:coc#enable_at_startup = 1
 let g:coc_node_path = '/usr/bin/node'
-let g:coc_global_extensions = ['coc-snippets', 'coc-json', 'coc-sh', 'coc-tsserver', 'coc-pyright', 'coc-lua']
+let g:coc_global_extensions = ['coc-snippets', 'coc-json', 'coc-sh', 'coc-tsserver', 'coc-pyright', 'coc-lua', 'coc-yaml']
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.

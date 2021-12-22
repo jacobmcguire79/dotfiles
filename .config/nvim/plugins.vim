@@ -43,6 +43,7 @@ Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-surround'
 Plug 'pearofducks/ansible-vim'
 Plug 'hashivim/vim-terraform'
+Plug 'm-kat/aws-vim'
 "Plug 'neovim/nvim-lspconfig'
 " Ruby specific
 "Plug 'vim-ruby/vim-ruby' " For Facts, Ruby functions, and custom providers
