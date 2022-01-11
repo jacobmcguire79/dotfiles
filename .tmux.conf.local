@@ -1,4 +1,4 @@
-# https://github.com/gpakosz/.tmux
+ https://github.com/gpakosz/.tmux
 # (‑●‑●)> dual licensed under the WTFPL v2 license and the MIT license,
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
@@ -294,7 +294,7 @@ tmux_conf_copy_to_os_clipboard=false
 # bind C-a send-prefix
 
 # window names
-set-option -g status-interval 5
+set-option -g status-interval 60
 set-option -g automatic-rename on
 set-option -g automatic-rename-format '#{b:pane_current_path}'
 
