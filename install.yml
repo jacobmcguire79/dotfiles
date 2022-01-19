@@ -1,13 +1,18 @@
 - name: "setup workstation configurations"
   hosts: localhost
+  vars:
+    nvim_download: "https://github.com/neovim/neovim/releases/download/{{ nvim_release }}/nvim.appimage"
+    nvim_rlease: "{{ default('nightly') }}"
+    nvim_executable: "{{ lookup('env', 'HOME') }}/.local/bin/nvim"
   tasks:
     - name: "install packages via {{ ansible_pkg_mgr }}"
       package:
         state: "latest"
         name:
-          - konsole
+          - "{{ 'konsole' if ansible_pkg_mgr in ['yum', 'apt'] else 'iterm2' }}"
           - zsh
           - git
+          - gh
       become: true
 
     - name: "neovim nightly block"
@@ -29,19 +34,19 @@
 
         - name: "install neovim from appimage"
           get_url:
-            dest: "/usr/bin/nvim"
-            url: "https://github.com/neovim/neovim/releases/download/v0.5.0/nvim.appimage"
+            dest: "{{ nvim_executable }}"
+            url: "{{ nvim_download }}"
             validate_certs: no
 
         - name: "updated nvim permissions"
           file:
-            path: "/usr/bin/nvim"
+            path: "{{ nvim_executable }}"
             group: root
             state: file
             mode: "u+x"
-            owner: "root"
+            owner: "{{ ansible_user }}"
 
       become: true
 
     - name: "install neovim plugins"
-      command: nvim -es PlugInstall!
+      command: nvim -es PackerSync!
