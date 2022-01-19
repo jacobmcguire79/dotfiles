@@ -1,0 +1,58 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+# format = """$directory$git_branch$git_status$character"""
+format = """
+[┌](gray dimmed) $directory$git_branch$git_status$fill$all
+[└](gray dimmed) $character """
+
+[fill]
+symbol = "─"
+style = "dimmed gray"
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+
+[line_break]
+disabled = true
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[aws]
+format = '[$symbol($profile )(\($region\) )]($style)'
+style = "bold blue"
+[aws.region_aliases]
+us-gov-west-1 = "gw"
+us-east-1 = "va"
+
+[docker_context]
+format = "[🐋 $context](blue bold)"
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+[git_status]
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+style = "yellow"
+up_to_date = "[✓](green)"
+
+[kubernetes]
+format = '[${symbol}$context \($namespace\)](dimmed green) '
+disabled = false
+[kubernetes.context_aliases]
+"dev.localcluster.k8s" = "dev"
+".*/openshift-cluster/.*" = "openshift"
+"gke_.*_(?P<cluster>[\\w-]+)" = "gke-$cluster"
+
+[lua]
+format = "[${symbol}$version](bold blue) "
+
+[nodejs]
+format = "[${symbol}$version](bold green) "
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[shell]
+disabled = false
