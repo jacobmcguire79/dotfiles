@@ -2,8 +2,8 @@
 add_newline = true
 # format = """$directory$git_branch$git_status$character"""
 format = """
-[┌](gray dimmed) $directory$git_branch$git_status$fill$all
-[└](gray dimmed) $character """
+[┌](grey dimmed) $directory$git_branch$git_status$fill$all
+[└](grey dimmed) $character """
 
 [fill]
 symbol = "─"
@@ -38,7 +38,7 @@ style = "yellow"
 up_to_date = "[✓](green)"
 
 [kubernetes]
-format = '[${symbol}$context \($namespace\)](dimmed green) '
+format = '[${symbol}$context \($namespace\)](dimmed blue) '
 disabled = false
 [kubernetes.context_aliases]
 "dev.localcluster.k8s" = "dev"
