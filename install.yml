@@ -2,7 +2,7 @@
   hosts: localhost
   vars:
     nvim_download: "https://github.com/neovim/neovim/releases/download/{{ nvim_release }}/nvim.appimage"
-    nvim_release: "nightly"
+    nvim_release: "{{ release_version | default('nightly') }}"
     nvim_executable: "{{ lookup('env', 'HOME') }}/.local/bin/nvim"
   tasks:
     - name: "install packages via {{ ansible_pkg_mgr }}"
@@ -22,11 +22,13 @@
             state: absent
             name:
               - neovim
+          become: true
 
         - name: "install python3-neovim"
           package:
             state: present
             name: python3-neovim
+          become: true
 
         - name: "install pynvim"
           pip:
@@ -38,6 +40,11 @@
             url: "{{ nvim_download }}"
             validate_certs: no
 
+        - name: "ensure .local/bin exists"
+          file:
+            state: directory
+            path: "{{ lookup('env', 'HOME') }}/.local/bin"
+
         - name: "updated nvim permissions"
           file:
             path: "{{ nvim_executable }}"
@@ -45,8 +52,6 @@
             state: file
             mode: "u+x"
             owner: "{{ ansible_user }}"
-
-      become: true
 
     - name: "install neovim plugins"
       command: nvim -es PackerSync!
