@@ -2,14 +2,14 @@
   hosts: localhost
   vars:
     nvim_download: "https://github.com/neovim/neovim/releases/download/{{ nvim_release }}/nvim.appimage"
-    nvim_rlease: "{{ default('nightly') }}"
+    nvim_release: "nightly"
     nvim_executable: "{{ lookup('env', 'HOME') }}/.local/bin/nvim"
   tasks:
     - name: "install packages via {{ ansible_pkg_mgr }}"
       package:
         state: "latest"
         name:
-          - "{{ 'konsole' if ansible_pkg_mgr in ['yum', 'apt'] else 'iterm2' }}"
+          - "{{ 'konsole' if ansible_pkg_mgr in ['yum', 'apt', 'dnf'] else 'iterm2' }}"
           - zsh
           - git
           - gh

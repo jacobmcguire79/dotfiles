@@ -1,6 +1,7 @@
 [Appearance]
-ColorScheme=Ocean
-Font=MesloLGS NF,10,-1,5,50,0,0,0,0,0
+ColorScheme=Material
+Font=MesloLGSDZ Nerd Font,10,-1,5,50,0,0,0,0,0
+UseFontLineChararacters=true
 
 [General]
 Command=/usr/bin/zsh
