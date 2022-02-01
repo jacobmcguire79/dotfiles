@@ -9,7 +9,7 @@
       package:
         state: "latest"
         name:
-          - "{{ 'konsole' if ansible_pkg_mgr in ['yum', 'apt'] else 'iterm2' }}"
+          - "{{ 'konsole' if ansible_pkg_mgr in ['yum', 'apt', 'dnf'] else 'iterm2' }}"
           - zsh
           - git
           - gh
