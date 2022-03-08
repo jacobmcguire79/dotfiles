@@ -1,57 +1,20 @@
 - name: "setup workstation configurations"
   hosts: localhost
   vars:
-    nvim_download: "https://github.com/neovim/neovim/releases/download/{{ nvim_release }}/nvim.appimage"
-    nvim_release: "{{ release_version | default('nightly') }}"
-    nvim_executable: "{{ lookup('env', 'HOME') }}/.local/bin/nvim"
+    packages:
+      RedHat:
+        - konsole
+        - git
+        - gh
+        - starship
   tasks:
     - name: "install packages via {{ ansible_pkg_mgr }}"
       package:
-        state: "latest"
+        state: "present"
         name:
           - "{{ 'konsole' if ansible_pkg_mgr in ['yum', 'apt', 'dnf'] else 'iterm2' }}"
-          - zsh
           - git
           - gh
+          - starship
+
       become: true
-
-    - name: "neovim nightly block"
-      block:
-        - name: "remove package versions not provided by rhel"
-          package:
-            state: absent
-            name:
-              - neovim
-          become: true
-
-        - name: "install python3-neovim"
-          package:
-            state: present
-            name: python3-neovim
-          become: true
-
-        - name: "install pynvim"
-          pip:
-            name: pynvim
-
-        - name: "install neovim from appimage"
-          get_url:
-            dest: "{{ nvim_executable }}"
-            url: "{{ nvim_download }}"
-            validate_certs: no
-
-        - name: "ensure .local/bin exists"
-          file:
-            state: directory
-            path: "{{ lookup('env', 'HOME') }}/.local/bin"
-
-        - name: "updated nvim permissions"
-          file:
-            path: "{{ nvim_executable }}"
-            group: root
-            state: file
-            mode: "u+x"
-            owner: "{{ ansible_user }}"
-
-    - name: "install neovim plugins"
-      command: nvim -es PackerSync!

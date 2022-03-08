@@ -21,7 +21,7 @@ alias kwpn='watch kubectl get pods -n'
 alias kgsn='kubectl get secret -n'
 alias kgssn='kubectl get statefulset -n'
 alias wkev='watch "kubectl get events --sort-by .lastTimestamp | tail -n 20"'
-alias kev='"kubectl get events --sort-by .lastTimestamp"'
+alias kev='kubectl get events --sort-by .lastTimestamp'
 # Terraform
 alias tf='terraform'
 
@@ -36,7 +36,12 @@ alias ave='ansible-vault edit'
 #aws
 alias mfa='source ~/gettoken.sh'
 alias asc='aws ssm start-session --target'
+alias asm='_asm(){ aws ssm start-session --target=$(aws ec2 describe-instances --filter "Name=tag:Name,Values=[$1]" --query "Reservations[].Instances[].InstanceId" --output text)}; _asm'
 alias ecrlogin='aws ecr get-login-password --region us-gov-west-1 | docker login --username AWS --password-stdin $(aws sts get-caller-identity --query Account --output text).dkr.ecr.us-gov-west-1.amazonaws.com'
 alias ecrpush='_ecrpush(){ docker push "$(aws sts get-caller-identity --query Account --output text)".dkr.ecr.us-gov-west-1.amazonaws.com/"$1"}; _ecrpush'
 alias ecrpull='_ecrpull(){ docker pull "$(aws sts get-caller-identity --query Account --output text)".dkr.ecr.us-gov-west-1.amazonaws.com/"$1"}; _ecrpull'
 alias adfslog='aws-adfs login --adfs-host=prod.adfs.federation.va.gov --provider-id urn:amazon:webservices:govcloud --region us-gov-west-1 --no-ssl-verification'
+alias aecd='_aecd(){ aws ec2 describe-instances --filter "Name=tag:Name,Values=[$1]" --query "Reservations[].Instances[].InstanceId"}; _aecd'
+
+#IPA
+alias ipajoin='_ipajoin(){ ipa-client-install --domain="$1".bip.va.gov --realm="$1^^".BIP.VA.GOV -p $2 -W --server=idm."$1".bip.va.gov --force-join --mkhomedir }'

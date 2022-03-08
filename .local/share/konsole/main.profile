@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=Material
-Font=MesloLGSDZ Nerd Font,10,-1,5,50,0,0,0,0,0
+Font=MesloLGS NF,10,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [General]
