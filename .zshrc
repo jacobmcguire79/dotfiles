@@ -59,6 +59,7 @@ ZSH_CUSTOM=$HOME/.zsh/
 plugins=(git zsh-autosuggestions docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
+set -o vi
 # User configuration
 # RBENV
 #export PATH="$HOME/.rbenv/bin:$PATH"
@@ -84,6 +85,7 @@ complete -F __start_kubectl k
 # export ARCHFLAGS="-arch x86_64"
 # Alias
 source ~/.zsh/aliases
+source ~/.zsh/functions.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

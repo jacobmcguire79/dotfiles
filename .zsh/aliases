@@ -45,3 +45,7 @@ alias aecd='_aecd(){ aws ec2 describe-instances --filter "Name=tag:Name,Values=[
 
 #IPA
 alias ipajoin='_ipajoin(){ ipa-client-install --domain="$1".bip.va.gov --realm="$1^^".BIP.VA.GOV -p $2 -W --server=idm."$1".bip.va.gov --force-join --mkhomedir }'
+
+#Build harness
+alias bhiamp='_bhiamp(){ docker run -e "ENV=$3" --rm -it -v ~/.git-credentials:/root/.git-credentials -v "$HOME/.aws":/root/.aws/ -v $(pwd):/src/ "$1".dkr.ecr.us-gov-west-1.amazonaws.com/bip/build-harness:2022-03-04.1 $2 $3 $4 }; _bhiamp'
+alias bhiama='_bhiama(){ docker run --rm -it -v ~/.git-credentials:/root/.git-credentials -v "$HOME/.aws":/root/.aws/ -v $(pwd):/src/ "$1".dkr.ecr.us-gov-west-1.amazonaws.com/bip/build-harness:2022-03-04.1 $2 $3 }; _bhiama'
