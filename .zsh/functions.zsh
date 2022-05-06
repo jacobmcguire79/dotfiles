@@ -12,40 +12,6 @@ function ipajoin(){
   ipa-client-install --domain="$1".bip.va.gov --realm="$1^^".BIP.VA.GOV -p $2 -W --server=idm."$1".bip.va.gov --force-join --mkhomedir
 }
 
-#Build harness
-function bh_image(){
-  local ACCT_ID="$(aws sts get-caller-identity --query Account --output text)"
-  $(ecrlogin)
-  $(ecrpull bip/build-harness:"${IMAGE_TAG}")
-  docker tag "${ACCT_ID}.dkr.ecr.us-gov-west-1.amazonaws.com/bip/build-harness:${IMAGE_TAG}" local/build-harness:latest
-}
-
-function bh(){
-  local ACCT_ID="$1"
-  local STATE="$2"
-  local RECIPE="$3"
-  local ENV="$4"
-  local PROJECT="$5"
-
-  docker run -e "STATE_PREFIX=${STATE}" --rm -it -v ~/.git-credentials:/root/.git-credentials -v "$HOME/.aws":/root/.aws/ -v $(pwd):/src/ ${ACCT_ID}.dkr.ecr.us-gov-west-1.amazonaws.com/bip/build-harness:2022-03-04.1 ${RECIPE} ${ENV} ${PROJECT}
-}
-
-function bh_local(){
-  local STATE="$1"
-  local RECIPE="$2"
-  local ENV="$3"
-  local PROJECT="$4"
-
-  docker run -e "STATE_PREFIX=${STATE}" --rm -it -v ~/.git-credentials:/root/.git-credentials -v "$HOME/.aws":/root/.aws/ -v $(pwd):/src/ -v $HOME/platformv2/bip-terraform-modules:/src2/ local/build-harness:latest ${RECIPE} ${ENV} ${PROJECT}
-}
-
-function bhiama(){
-  local ACCT_ID="$1"
-  local RECIPE="$2"
-  local ENV="$3"
-  docker run --rm -it -v ~/.git-credentials:/root/.git-credentials -v "$HOME/.aws":/root/.aws/ -v $(pwd):/src/ "${ACCT_ID}".dkr.ecr.us-gov-west-1.amazonaws.com/bip/build-harness:2022-03-04.1 ${RECIPE} ${ENV}
-}
-
 # AWS IAM
 function assume_aws_role(){
 	unset AWS_SESSION_TOKEN AWS_SECRET_ACCESS_KEY AWS_ACCESS_KEY_ID
@@ -86,7 +52,7 @@ function ec2_list(){
   local TAG_KEY="$1"
   local TAG_VALUES="$2"
 
-  aws ec2 describe-instances --filter "Name=tag:${TAG_KEY},Values=[${TAG_VALUES}]" --query 'Reservations[].Instances[].[ [Tags[?Key==`Name`].Value][0][0],PrivateIpAddress,InstanceId]' --output table
+  aws ec2 describe-instances --filter "Name=tag:${TAG_KEY},Values=[${TAG_VALUES}]" --query 'Reservations[].Instances[].[ [Tags[?Key==`Name`].Value][0][0],PrivateIpAddress,InstanceId,State[?Name==`Running`].Value[0]]' --output table
 }
 
 function ec2_subnet_list(){

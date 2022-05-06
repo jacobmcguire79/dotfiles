@@ -81,6 +81,10 @@ autoload -U compinit
 compinit -i
 source <(kubectl completion zsh)
 complete -F __start_kubectl k
+# AWS CLI Completion
+if [[ -x aws ]]; then
+  complete -C '/usr/local/bin/aws_completer' aws
+fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 # Alias
