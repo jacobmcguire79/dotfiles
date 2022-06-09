@@ -47,5 +47,5 @@ if [[ ! -x $(which ansible) ]]; then
 fi
 
 if [[ -x $(which ansible) ]]; then
-  ansible-playbook install.yml
+  ansible-playbook https://github.com/jacobmcguire79/dotfiles/blob/master/install.yml
 fi
