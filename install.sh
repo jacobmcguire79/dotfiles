@@ -10,7 +10,7 @@ dotconfig() {
   echo ".cfg" >> .gitignore
   config stash -a
   config init
-  config remote add origin https://github.com/jaredzieche/dotfiles.git
+  config remote add origin https://github.com/jacobmcguire79/dotfiles.git
   config fetch origin
   config config --local status.showUntrackedFiles no
   config checkout $branch -f
